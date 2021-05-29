@@ -1,0 +1,89 @@
+header {
+    position: fixed;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: black 0 0 3px;
+}
+
+.main {
+    background-image: url(fon2.jpg);
+    padding: 300px
+}
+nav {
+    margin-left: 80px;
+    width: 100%;
+    background-image: url(fon6.jpg);
+    background-size: cover;
+}
+.o {
+    background-image: url(fon4.jpg);
+    padding: 150px;
+    background-size: contain;
+    background position: center;
+}
+.oo {
+    background-image: url(fon5.jpg);
+    padding: 150px;
+    background-size: contain;
+    background position: center;
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+img:hover {
+    width: 300px;
+    height: 300px;
+}
+
+.navig {
+    text-decoration: none;
+    color:  white;
+    display: inline-block;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #7abac4;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    transition: 2s;
+}
+.navig:hover {
+    color: #7abac4;
+    background-color: white;
+    border-color: #7abac4;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+
+}
+h2 {
+    font-size: 50px;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    padding: 12px;
+
+}
+p {
+    text-align: center;
+    padding: 12px;
+}
+
+
+.h:hover {
+    background-color: #7abac4;
+    color: white;
+    border-radius: 20px;
+}
+.h {
+    color: white;
+}
