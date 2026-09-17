@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Dashboard</title>
+    <link rel="stylesheet" href="RobotDashboard_css.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Левая часть: визуальная сцена робота -->
+        <div class="content-area" id="contentArea">
+            <div class="robot-stage" id="robotStage">
+                <img id="platformLayer" class="scene-layer" src="img/platform.png" alt="Платформа">
+                <img id="wheelArrowL" class="scene-layer" src="img/arrow_up.png" alt="Колесо A">
+                <img id="wheelArrowR" class="scene-layer" src="img/arrow_up.png" alt="Колесо B">
+                <img id="vectorLayer" class="scene-layer" src="img/velocity_summ_vector_up.png" alt="Вектор">
+            </div>
+            <div class="stage-info" id="stageInfo">Объект в захвате: нет &bull; Высота схвата: 0 см</div>
+        </div>
+
+        <aside class="control-panel">
+            <h2 class="panel-title">Управление роботом</h2>
+
+            <fieldset class="param-group">
+                <legend>Двигатели (-100...100)</legend>
+                <div class="param-row">
+                    <label for="motorA" class="param-label">Motor A</label>
+                    <input type="range" id="motorA" min="-100" max="100" value="0" step="1">
+                    <span class="param-value" id="motorAValue">0</span>
+                </div>
+                <div class="param-row">
+                    <label for="motorB" class="param-label">Motor B</label>
+                    <input type="range" id="motorB" min="-100" max="100" value="0" step="1">
+                    <span class="param-value" id="motorBValue">0</span>
+                </div>
+            </fieldset>
+
+            <fieldset class="param-group">
+                <legend>Захват</legend>
+                <div class="param-row">
+                    <label for="gripperStatus" class="param-label">Захват</label>
+                    <select id="gripperStatus">
+                        <option value="1">1 - открыт</option>
+                        <option value="0" selected>0 - закрыт</option>
+                    </select>
+                </div>
+                <div class="param-row">
+                    <label for="objectInGrip" class="param-label">Объект в захвате</label>
+                    <select id="objectInGrip">
+                        <option value="1">1 - есть</option>
+                        <option value="0" selected>0 - нет</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset class="param-group">
+                <legend>Дальномеры (10-80 см)</legend>
+                <div class="param-row">
+                    <label for="rangefinder1" class="param-label">Дальномер 1</label>
+                    <input type="range" id="rangefinder1" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder1Value">10</span>
+                </div>
+                <div class="param-row">
+                    <label for="rangefinder2" class="param-label">Дальномер 2</label>
+                    <input type="range" id="rangefinder2" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder2Value">10</span>
+                </div>
+                <div class="param-row">
+                    <label for="rangefinder3" class="param-label">Дальномер 3</label>
+                    <input type="range" id="rangefinder3" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder3Value">10</span>
+                </div>
+                <div class="param-row">
+                    <label for="rangefinder4" class="param-label">Дальномер 4</label>
+                    <input type="range" id="rangefinder4" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder4Value">10</span>
+                </div>
+                <div class="param-row">
+                    <label for="rangefinder5" class="param-label">Дальномер 5</label>
+                    <input type="range" id="rangefinder5" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder5Value">10</span>
+                </div>
+                <div class="param-row">
+                    <label for="rangefinder6" class="param-label">Дальномер 6</label>
+                    <input type="range" id="rangefinder6" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder6Value">10</span>
+                </div>
+                <div class="param-row">
+                    <label for="rangefinder7" class="param-label">Дальномер 7</label>
+                    <input type="range" id="rangefinder7" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder7Value">10</span>
+                </div>
+                <div class="param-row">
+                    <label for="rangefinder8" class="param-label">Дальномер 8</label>
+                    <input type="range" id="rangefinder8" min="10" max="80" value="10" step="1">
+                    <span class="param-value" id="rangefinder8Value">10</span>
+                </div>
+            </fieldset>
+
+            <fieldset class="param-group">
+                <legend>Высота схвата</legend>
+                <div class="param-row">
+                    <label for="gripHeight" class="param-label">Высота, см</label>
+                    <input type="range" id="gripHeight" min="0" max="100" value="0" step="1">
+                    <span class="param-value" id="gripHeightValue">0</span>
+                </div>
+            </fieldset>
+        </aside>
+    </div>
+
+    <script src="RobotDashboard_script.js"></script>
+</body>
+</html>
