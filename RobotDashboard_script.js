@@ -66,7 +66,7 @@ function updateScene() {
         const rad = ANGLES[i] * Math.PI / 180;
         const cos = Math.cos(rad), sin = Math.sin(rad);
         // hit point distance from center
-        const dist = R_ROBOT + 20 + (val - 10) / 70 * (MAX_R - R_ROBOT - 20);
+        const dist = R_ROBOT + 20 + ((val - 10) * 6) / 70 * (MAX_R - R_ROBOT - 20);
         const px = CW / 2 + cos * dist;
         const py = CH / 2 + sin * dist;
         // line start: robot edge
